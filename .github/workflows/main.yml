@@ -14,5 +14,5 @@ jobs:
       uses: msfjarvis/setup-android@1.0
       with:
         entrypoint: ./gradlew
-        args: assembleDebug
+        args: dependencies assembleDebug
     
