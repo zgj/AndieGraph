@@ -1,0 +1,15 @@
+name: 'setup-android'
+description: 'A full-fledged environment for Android builds'
+author: 'Harsh Shandilya (msfjarvis)'
+icon: 'arrow-right'
+color: 'green'
+inputs: 
+  gradleTasks:
+    description: 'Gradle tasks to run - If you want to run ./gradlew assemble, specify assemble here. '
+    default: 'assembleDebug'
+    deprecationMessage: 'The gradleTasks property will not be supported after November 1, 2019. Use run with an explicit command.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.gradleTasks }}
